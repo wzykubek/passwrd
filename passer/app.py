@@ -1,11 +1,12 @@
 from random import SystemRandom
+from string import digits, punctuation
 
 
 class Passer:
     def __init__(self, dictionary_file: str) -> None:
         self.rng = SystemRandom()
         self.dictionary = self.__get_words_list(dictionary_file)
-        self.symbols = list("""`~1!2@3#4$5%6^7&8*9(0)-_=+\\|]}[{;:'",<.>/?""")
+        self.symbols = list(digits + punctuation)
 
     @staticmethod
     def __get_words_list(dictionary_path: str) -> list:
