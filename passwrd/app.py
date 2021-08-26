@@ -2,7 +2,7 @@ from random import SystemRandom
 from string import digits, punctuation
 
 
-class Passer:
+class Passwrd:
     def __init__(self, dictionary_file: str) -> None:
         self.rng = SystemRandom()
         self.dictionary = self.__get_words_list(dictionary_file)
